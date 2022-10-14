@@ -1,0 +1,13 @@
+import { Navigate, Route, Routes } from "react-router-dom"
+import { JournalPage } from "../pages/JournalPage"
+
+export const JournalRoutes = () => {
+  return (
+    <Routes>
+        <Route path="/" element={<JournalPage />} />
+        {/* Si entro y no estoy en el slash "/" mandame a  */}
+        <Route path="/*" element={<Navigate to="/" />} />
+
+    </Routes>
+  )
+}
